@@ -1,0 +1,86 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 14px;
+}
+
+body {
+  font-size: 14px;
+}
+
+.product-size {
+  visibility: hidden;
+}
+
+.customDropDown {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 400px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
+  background-color: #eeeeee;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.titleContainer > h1 {
+  text-transform: uppercase;
+}
+
+.titleContainer-Options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
+  background-color: #eeeeee;
+  cursor: pointer;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.titleContainer-Options > h1 {
+  text-transform: uppercase;
+}
+
+.optionsContainer {
+  border: 1px solid black;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.option-title {
+  background-color: #eeeeee;
+  padding: 3px 8px;
+  font-weight: 600;
+}
+
+.option:hover {
+  background-color: #eeeeee;
+}
+
+.option-name {
+  font-weight: 600;
+}
+
+.option-price {
+  color: red;
+  font-weight: 600;
+}
