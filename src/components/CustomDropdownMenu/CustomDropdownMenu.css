@@ -15,8 +15,9 @@
   border: 1px solid #000000;
 }
 
-.titleContainer > h1 {
+.titleContainer > p {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .titleContainer-Options {
@@ -30,8 +31,9 @@
   border-bottom: none;
 }
 
-.titleContainer-Options > h1 {
+.titleContainer-Options > p {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .optionsContainer {

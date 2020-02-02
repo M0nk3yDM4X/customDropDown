@@ -25,7 +25,7 @@ const CustomDropdownMenu = ({ data, showDropDown, setShowDropDown }) => {
         }
         onClick={dropdown}
       >
-        <h1>{title}</h1>
+        <p>{title}</p>
         <KeyboardArrowDown />
       </div>
 
@@ -40,7 +40,7 @@ const CustomDropdownMenu = ({ data, showDropDown, setShowDropDown }) => {
               name = "Taille :";
             }
             return (
-              <div
+              <p
                 key={index}
                 className={name === "Taille :" ? "option-title" : "option"}
                 onClick={() => {
@@ -52,15 +52,15 @@ const CustomDropdownMenu = ({ data, showDropDown, setShowDropDown }) => {
                 <span className="option-name">{name}</span>
 
                 {stock === "0" ? (
-                  <p>Désolé, cet article est épuisé</p>
+                  <span>Désolé, cet article est épuisé</span>
                 ) : stock > 0 && stock < 4 ? (
-                  <p>Vite, plus que 4 en stock !</p>
+                  <span>Vite, plus que 4 en stock !</span>
                 ) : stock > 4 ? (
-                  <p>En stock</p>
+                  <span>En stock</span>
                 ) : null}
 
                 <span className="option-price">{price}</span>
-              </div>
+              </p>
             );
           })}
         </div>
