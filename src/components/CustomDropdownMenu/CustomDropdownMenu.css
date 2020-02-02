@@ -1,0 +1,65 @@
+.customDropDown {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 400px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
+  background-color: #eeeeee;
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+.titleContainer > h1 {
+  text-transform: uppercase;
+}
+
+.titleContainer-Options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
+  background-color: #eeeeee;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-bottom: none;
+}
+
+.titleContainer-Options > h1 {
+  text-transform: uppercase;
+}
+
+.optionsContainer {
+  border: 1px solid #000000;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.option-title {
+  background-color: #eeeeee;
+  padding: 3px 8px;
+  font-weight: 600;
+}
+
+.option:hover {
+  background-color: #eeeeee;
+}
+
+.option-name {
+  font-weight: 600;
+}
+
+.option-price {
+  color: #fb0001;
+  font-weight: 600;
+}

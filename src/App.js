@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import CustomDropdownMenu from "./components/CustomDropdownMenu.js";
+import CustomDropdownMenu from "./components/CustomDropdownMenu/CustomDropdownMenu.js";
 
 const App = () => {
+  // State showDropDown to manage our customDropDown --> true = dropDown visible / false = dropDown hidden
   const [showDropDown, setShowDropDown] = useState(false);
 
-  const array = [
-    { name: "S", value: 10, dataStock: 2, dataPrice: 18.0 },
-    { name: "M", value: 11, dataStock: 5, dataPrice: 18.0 },
-    { name: "L", value: 12, dataStock: 0, dataPrice: 18.0 },
-    { name: "XL", value: 13, dataStock: 2, dataPrice: 22.0 }
-  ];
+  // Data variable which is an array of objects
+  // 1) Copy of querySelectorAll in order to scope option of .product-size className
+  // 2) Mapping on this array
+  // 3) Return an array of objects with four keys, which are in fact the data located in every <option> </option>
+  const data = [...document.querySelectorAll(".product-size > option")].map(
+    element => {
+      return {
+        value: element.value,
+        dataStock: element.getAttribute("data-stock"),
+        dataPrice: element.getAttribute("data-price"),
+        name: element.textContent
+      };
+    }
+  );
 
   return (
     <div className="App">
@@ -31,7 +40,7 @@ const App = () => {
         </option>
       </select>
       <CustomDropdownMenu
-        array={array}
+        data={data}
         showDropDown={showDropDown}
         setShowDropDown={setShowDropDown}
       />
